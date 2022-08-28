@@ -14,6 +14,10 @@ const countPositivesSumNegatives = (input) => {
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
 console.log(countPositivesSumNegatives(array));
 
+// function countPositivesSumNegatives(input) {
+//     return input && input.length ? [input.filter(p => p > 0).length, input.filter(n => n < 0).reduce((a, b) => a + b, 0)] : [];
+// }
+
 //Given an array of integers.
 //Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
 //0 is neither positive nor negative.
