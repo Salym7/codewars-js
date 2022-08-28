@@ -1,10 +1,11 @@
 function betterThanAverage(classPoints, yourPoints) {
-  const sumPoint  = classPoints.reduce((acc, current) => acc + current, 0);
-   const averagePoint = sumPoint / classPoints.length
+    const sumPoint = classPoints.reduce((acc, current) => acc + current, 0);
+    const averagePoint = sumPoint / classPoints.length
     if (yourPoints > averagePoint) return true
     return false
 }
-array = [50,60,90,50]
+
+array = [50, 60, 90, 50]
 myPoints = 70
 console.log(betterThanAverage(array, myPoints));
 
