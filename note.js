@@ -77,3 +77,100 @@
 //
 //     return format;
 // }
+
+// const encrypt = (str) => {
+//     let result = ''
+//     for (let i = 0; i < str.length; i += 2) {
+//         if (str[i + 1]) {
+//             result += str[i + 1] + str[i]
+//         } else {
+//             result += str[i]
+//         }
+//     }
+//     return result
+// }
+// console.log(encrypt('move'));
+// 'omev'
+
+// console.log(encrypt('attack'));
+// 'taatkc'
+
+// encrypt('car!'); // 'ac!r'
+
+// Если число символов нечётное,
+
+// то последний символ остаётся на своём месте
+//
+// encrypt('go!'); // 'og!'
+//
+// export const getTriangleArea = (h, b) => 0.5 * h * b
+
+// function domainName(url){
+//     return  url.replace('http://', '')
+//         .replace('https://', '')
+//         .replace('www.', '')
+//         .split('.')[0];
+// }
+
+// const century = (year) => Math.ceil(year / 100)
+
+// function squareSum(numbers) {
+//     if (numbers.length === 0) return 0
+//     return numbers.reduce((a, b) => a + b ** 2, 0)
+// }
+//
+// console.log(squareSum([-20, 16]));
+//
+// const hero = (bullets, dragons) => bullets / 2 >= dragons;
+//
+// const sum = (numbers) => numbers.length === 0 ? 0 : numbers.reduce((a, b) => a + b)
+//
+// function makeNegative(num) {
+//     if (Math.sign(num) === -1) {
+//         return num
+//     } else return num * -1
+// }
+//
+// function correct(string) {
+//     return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I')
+// }
+
+const arr = N => {
+    const result = []
+    for (let i = 0; i < N; i++) {
+        result.push(i)
+    }
+    return result
+}
+
+function solution(nums) {
+    if (!nums) return []
+    return nums.sort((a, b) => a - b)
+}
+
+function getGrade(s1, s2, s3) {
+    const average = (s1 + s2 + s3) / 3
+    if (average >= 90) return 'A'
+    if (average >= 80) return 'B'
+    if (average >= 70) return 'C'
+    if (average >= 60) return 'D'
+    return 'F'
+}
+
+function between(a, b) {
+    const result = []
+    for (let i = a; i <= b; i++) {
+        result.push(i)
+    }
+    return result
+}
+
+function problem(x){
+    if(isNaN(x) || x === '' ) return 'Error'
+    return x*50+6
+}
+
+function cockroachSpeed(s) {
+    return Math.floor(s*100/360)
+}
+
