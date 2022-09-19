@@ -9,7 +9,7 @@ function sumDigPow(a, b) {
     return result
 }
 
-console.log(sumDigPow(50, 150));;
+console.log(sumDigPow(50, 150));
 
 // The number 89 is the first integer with more than one digit that fulfills the property partially
 // introduced in the title of this kata. What's the use of saying "Eureka"? Because this sum gives the same number.
