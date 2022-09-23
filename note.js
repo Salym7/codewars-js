@@ -157,20 +157,38 @@ function getGrade(s1, s2, s3) {
     return 'F'
 }
 
-function between(a, b) {
-    const result = []
-    for (let i = a; i <= b; i++) {
-        result.push(i)
-    }
-    return result
-}
+// function between(a, b) {
+//     const result = []
+//     for (let i = a; i <= b; i++) {
+//         result.push(i)
+//     }
+//     return result
+// }
+//
+// function problem(x){
+//     if(isNaN(x) || x === '' ) return 'Error'
+//     return x*50+6
+// }
+//
+// function cockroachSpeed(s) {
+//     return Math.floor(s*100/360)
+// }
+//
+// String.prototype.toJadenCase = function() {
+//     return this
+//         .split(" ")
+//         .map(i => i.replace(i[0], i[0].toUpperCase()))
+//         .join(" ");
+// };
 
-function problem(x){
-    if(isNaN(x) || x === '' ) return 'Error'
-    return x*50+6
-}
 
-function cockroachSpeed(s) {
-    return Math.floor(s*100/360)
-}
+// const func = (a) => {
+//     return (b) => {
+//         return b * a
+//     }
+// }
+//
+// const zam = func(10)
+// console.log(zam(12));
+
 
