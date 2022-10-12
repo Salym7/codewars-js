@@ -135,27 +135,18 @@
 //     return string.replace(/5/g, 'S').replace(/0/g, 'O').replace(/1/g, 'I')
 // }
 
-const arr = N => {
-    const result = []
-    for (let i = 0; i < N; i++) {
-        result.push(i)
-    }
-    return result
-}
-
-function solution(nums) {
-    if (!nums) return []
-    return nums.sort((a, b) => a - b)
-}
-
-function getGrade(s1, s2, s3) {
-    const average = (s1 + s2 + s3) / 3
-    if (average >= 90) return 'A'
-    if (average >= 80) return 'B'
-    if (average >= 70) return 'C'
-    if (average >= 60) return 'D'
-    return 'F'
-}
+// const arr = N => {
+//     const result = []
+//     for (let i = 0; i < N; i++) {
+//         result.push(i)
+//     }
+//     return result
+// }
+//
+// function solution(nums) {
+//     if (!nums) return []
+//     return nums.sort((a, b) => a - b)
+// }
 
 // function between(a, b) {
 //     const result = []
@@ -191,4 +182,93 @@ function getGrade(s1, s2, s3) {
 // const zam = func(10)
 // console.log(zam(12));
 
+// const s = 'abcэюя123!@#'
+// const p = /[^a-zа-я0-9]+/g
+// s.replace (p, '')
 
+// function firstNonConsecutive(arr) {
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] !== arr[i - 1] + 1) return arr[i]
+//     }
+// }
+// console.log(firstNonConsecutive([1, 2, 3, 4, 6, 7, 8]));
+//
+// function pipeFix(numbers) {
+//     const result = []
+//     for (let i = numbers[0]; i <= numbers[numbers.length - 1]; i++) {
+//         result.push(i)
+//     }
+//     return result
+// }
+
+// console.log(pipeFix([1,10]));
+
+// function areYouPlayingBanjo(name) {
+//     if (name[0] === 'r' || name[0] === 'R') return `${name} plays banjo`
+//     return `${name} does not play banjo`
+// }
+//
+// const nameShuffler = str => str.split(' ').reverse().join(' ')
+//
+// function getChar(c){
+//     return c.charCodeAt(0)
+// }
+//
+// console.log(getChar('A'));
+//
+// function hello(str) {
+//     if (!str) return 'Hello, World!'
+//     str = str.toLowerCase()
+//     str = str[0].toUpperCase() + str.slice(1)
+//     return `Hello, ${str}!`;
+// }
+
+// console.log(hello('naMe'));
+
+// let user = {
+//     name: 'andrei'
+// }
+//
+// Object.defineProperty(user, 'name', {
+//     writable: true
+// });
+//
+// Object.defineProperty(user, 'lastName', {
+//     value: 'Coper',
+//     writable: true
+// });
+//
+// console.log(Object.getOwnPropertyDescriptor(user, 'lastName'));
+
+//Input 	Output
+// "Jabroni" 	"Patron Tequila"
+// "School Counselor" 	"Anything with Alcohol"
+// "Programmer" 	"Hipster Craft Beer"
+// "Bike Gang Member" 	"Moonshine"
+// "Politician" 	"Your tax dollars"
+// "Rapper" 	"Cristal"
+// anything else 	"Beer"
+
+function getDrinkByProfession(param) {
+    const str = param.toLowerCase()
+    if (str === 'jabroni') return "Patron Tequila";
+    if (str === 'school counselor') return "Anything with Alcohol";
+    if (str === 'programmer') return "Hipster Craft Beer";
+    if (str === 'bike gang member') return "Moonshine";
+    if (str === 'politician') return "Your tax dollars";
+    if (str === 'rapper') return "Cristal";
+    return "Beer";
+}
+
+let str = '12345'
+
+// console.log(str.split('').reverse().join(''));
+
+function remove(str) {
+    if (str[str.length - 1] === '!') {
+        return str.slice(0,- 1)
+    }
+    return str
+}
+
+console.log(remove('Hi!'));
