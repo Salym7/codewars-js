@@ -266,9 +266,17 @@ let str = '12345'
 
 function remove(str) {
     if (str[str.length - 1] === '!') {
-        return str.slice(0,- 1)
+        return str.slice(0, -1)
     }
     return str
 }
 
-console.log(remove('Hi!'));
+function smallEnough(a, limit) {
+    return a.every(item => limit > item)
+}
+
+function findNeedle(haystack) {
+    const indexNeedle = haystack.indexOf('needle')
+    if (indexNeedle + 1) return 'found the needle at position ' + indexNeedle
+    return "Your function didn't return anything"
+}
