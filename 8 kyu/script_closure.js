@@ -1,19 +1,26 @@
 'use strict'
 
-// Написать функцию-фабрику (паттерн программирования), которая будет возвращать функцию для суммирования принимающую один параметр.
-// При первом вызове она его запоминает, при втором - суммирует переданный параметр с тем, что передали впервые и т.д.
-// Все это с замыканиями, например: sum(3) = 3 sum(5) = 8 sum(20) = 28.
+function clous() {
+    return {
+       login: 'artur',
+       pass: "1234"
+   }
+}
 
-const f1 = () => {
- let a = 0
-    return (b) => {
-        a += b
-     return a
+function foo() {
+    const obj = clous()
+    return {
+        getLogin() {
+            return obj.login
+        },
+        getPass() {
+            return obj.pass
+        },
     }
 }
 
-const Sum = f1()
-console.log(Sum(3));
-console.log(Sum(5));
-console.log(Sum(20));
-console.log(Sum(25));
+const f2 = foo()
+const f3 = foo()
+
+console.log(f2.getPass());
+console.log(f2.getLogin());
