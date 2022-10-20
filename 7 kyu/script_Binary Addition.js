@@ -10,3 +10,18 @@
 // 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
 
 const addBinary = (a, b) => (a + b).toString(2)
+
+
+function count(count) {
+    if (count === 0) return  '0 = 0'
+    if (count < 0) return  count + ' < 0'
+    let sum = 0
+    let result = ''
+    for (let i = 1; count > i; i++) {
+        sum += i
+        result += i + '+'
+    }
+    return result + count +' = ' + (sum + count)
+}
+
+console.log(count(6));
