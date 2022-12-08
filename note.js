@@ -264,19 +264,128 @@ let str = '12345'
 
 // console.log(str.split('').reverse().join(''));
 
-function remove(str) {
-    if (str[str.length - 1] === '!') {
-        return str.slice(0, -1)
+// function remove(str) {
+//     if (str[str.length - 1] === '!') {
+//         return str.slice(0, -1)
+//     }
+//     return str
+// }
+
+// function smallEnough(a, limit) {
+//     return a.every(item => limit > item)
+// }
+//
+// function findNeedle(haystack) {
+//     const indexNeedle = haystack.indexOf('needle')
+//     if (indexNeedle + 1) return 'found the needle at position ' + indexNeedle
+//     return "Your function didn't return anything"
+// }
+
+function primeFactors(n) {
+    //your code here
+}
+
+// const remove = (string) => string.replace(/!/g, '') + '!';
+// console.log(remove('Hi!!!! Hi!!!'));
+
+function sumMul(n, m) {
+    if (n <= 0 || m <= 0) return "INVALID"
+    let sum = 0;
+    for (let count = n; count <= m; count += n) {
+        sum += count;
     }
-    return str
+    return sum;
 }
 
-function smallEnough(a, limit) {
-    return a.every(item => limit > item)
+// console.log(sumMul(2, 244712));
+
+
+// const string = 'abcd';
+//
+// const getArr = (str) => {
+//
+//     const arr = str.split('');
+//     const result = [str];
+//
+//     for (let i = 0; i < arr.length - 1; i += 1){
+//
+//         let copiedArr = [...arr];
+//
+//         copiedArr.splice(i + 1, 0, '.');
+//         result.push(copiedArr.join(''))
+//
+//     }
+//
+//     result.push(arr.join('.'))
+//     return result;
+// }
+
+// const func = getArr(string);
+// console.log(func)
+
+// const array = [1,2,3,4,5,6]
+//
+// console.log(array.at(-1));
+
+function reverse(string) {
+    return string.split(' ').reverse().join(' ')
 }
 
-function findNeedle(haystack) {
-    const indexNeedle = haystack.indexOf('needle')
-    if (indexNeedle + 1) return 'found the needle at position ' + indexNeedle
-    return "Your function didn't return anything"
+// console.log(reverse('Hello world'));
+
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin) {
+    dolphin ? dolphin = 2 : dolphin = 1
+    return pontoonDistance / (youSpeed * dolphin) < sharkDistance / sharkSpeed ? "Alive!" : "Shark Bait!"
 }
+
+function isPalindrome(x) {
+    x = x.toLowerCase()
+    return x === x.split('').reverse().join('')
+}
+
+isPalindrome('asdsa');
+
+function usdcny(usd) {
+    return (usd * 6.75).toFixed(2) + ' Chinese Yuan'
+}
+
+// console.log(usdcny(4666));
+
+// let code ='codewar '.repeat(10).split(' ')
+
+function peopleWithAgeDrink(old) {
+    if (old <= 13) return "drink toddy"
+    if (old <= 17) return "drink coke"
+    if (old <= 20) return "drink beer"
+    return "drink whisky"
+}
+
+function addLength(str) {
+  return   str.split(' ').map((item) => {
+        return item + ' ' + item.length
+    })
+}
+
+// console.log(addLength('you will win'));
+
+function removeUrlAnchor(url) {
+    return url.split('#')[0]
+}
+
+function switcheroo(x) {
+    return x.split('').map(i => i === 'c' ? 'c' : i === 'a' ? 'b' : 'a').join('')
+}
+//
+// console.log(switcheroo('abc'));
+
+const validateCode = (code) => '123'.includes(code.toString()[0]);
+
+function isPowerOfTwo(n){
+    while (n >= 1) {
+        if(n === 1) return true
+        n = n / 2
+    }
+    return false
+}
+
+console.log(isPowerOfTwo(1));
